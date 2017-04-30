@@ -1,10 +1,10 @@
-import { AplicacionPage } from './app.po';
+import { AppAngularPage } from './app.po';
 
-describe('aplicacion App', function() {
-  let page: AplicacionPage;
+describe('app-angular App', () => {
+  let page: AppAngularPage;
 
   beforeEach(() => {
-    page = new AplicacionPage();
+    page = new AppAngularPage();
   });
 
   it('should display message saying app works', () => {
