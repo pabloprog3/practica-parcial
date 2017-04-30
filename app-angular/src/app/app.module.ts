@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MascotasComponent } from './componentes/mascotas/mascotas.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    PageNotFoundComponent,
+    MascotasComponent
   ],
   imports: [
     BrowserModule,
