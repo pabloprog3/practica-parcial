@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   private login: string = "";
   
-  constructor() { }
+  constructor() { 
+    this.login = 'usuario no ingresado';
+  }
 
   ngOnInit() {
     

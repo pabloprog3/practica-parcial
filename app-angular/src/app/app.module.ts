@@ -10,6 +10,7 @@ import { MascotasComponent } from './componentes/mascotas/mascotas.component';
 
 //IMPORTO LAS RUTAS
 import {routing} from './app.routes';
+import { PersonasComponent } from './componentes/personas/personas.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {routing} from './app.routes';
     AppComponent,
     LoginComponent,
     PageNotFoundComponent,
-    MascotasComponent
+    MascotasComponent,
+    PersonasComponent
   ],
   imports: [
     BrowserModule,
