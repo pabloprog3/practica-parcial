@@ -5,8 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 import { MascotasComponent } from './componentes/mascotas/mascotas.component';
+
+//IMPORTO LAS RUTAS
+import {routing} from './app.routes';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +22,10 @@ import { MascotasComponent } from './componentes/mascotas/mascotas.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
