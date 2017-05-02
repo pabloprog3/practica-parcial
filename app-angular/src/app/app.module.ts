@@ -12,6 +12,8 @@ import { MascotasComponent } from './componentes/mascotas/mascotas.component';
 import {routing} from './app.routes';
 import { PersonasComponent } from './componentes/personas/personas.component';
 
+//IMPORTA LOS SERVICIOS
+import {MascotasService} from './servicios/mascotas.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,12 @@ import { PersonasComponent } from './componentes/personas/personas.component';
     routing    
   ],
   
-  providers: [],
+  providers: [MascotasService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+export class AppModule { 
+
+  
+}

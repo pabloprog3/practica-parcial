@@ -23,7 +23,7 @@ $app->get("/mascotas/(:id)", function ($id) use($app)
 });
 
 
-$app->post("/mascotas/agregar/", function() use($app){
+$app->post("/mascotas/agregar", function() use($app){
 	$nombre = $app->request->post("nombre");
 	$edad = $app->request->post("edad");
     $sexo = $app->request->post("sexo");
@@ -36,7 +36,7 @@ $app->post("/mascotas/agregar/", function() use($app){
 	$app->response->body($mascotaJSON);
 });
 
-$app->put("/mascotas/modificar/", function() use($app){
+$app->put("/mascotas/modificar", function() use($app){
 	$nombre = $app->request->put("nombre");
 	$edad = $app->request->put("edad");
     $sexo = $app->request->put("sexo");
@@ -50,7 +50,7 @@ $app->put("/mascotas/modificar/", function() use($app){
 	$app->response->body($mascotaJSON);
 });
 
-$app->delete("/mascotas/borrar/", function($id) use($app){
+$app->delete("/mascotas/borrar", function($id) use($app){
 		
     $id = $app->request->delete("id");
 
