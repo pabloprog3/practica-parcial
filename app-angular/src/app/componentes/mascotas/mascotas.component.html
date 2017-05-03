@@ -2,6 +2,7 @@
 
 <button type="button" class="btn btn-primary" (click)="mostrarAlta()">Agregar Mascota</button>
 <br><br>
+<div class="container">
 <form class="form-horizontal" style="margin-left:300px">
   <div *ngIf="visible"  class="input-group input-group-xs" id="formAlta">
         <input id="nombre" class="form-control" type="text" placeholder="Nombre de la mascota">
@@ -23,6 +24,7 @@
         <input type="button" style="margin-left:20px" class="btn btn-default" value="Ocultar" (click)="ocultarFormAlta()">
   </div>
 </form>
+</div>
 
 <br><br>
 <div class="table-responsive">

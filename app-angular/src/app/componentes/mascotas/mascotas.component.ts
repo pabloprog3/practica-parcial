@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MascotasService} from '../../servicios/mascotas.service';
+import {Mascota} from '../../clases/mascota';
 
 // Declaramos las variables para jQuery
 declare var jQuery:any;
@@ -13,11 +14,6 @@ declare var $:any;
 export class MascotasComponent implements OnInit {
   mascotas: Array<MascotasComponent> = [];
   visible: boolean = false;
-  
-  nombre:string;
-  edad;
-  sexo;
-  tipo;
 
   constructor(private servicio: MascotasService) {
 
@@ -49,15 +45,15 @@ export class MascotasComponent implements OnInit {
     let sexo = $("input[name='sexo']:checked").val();
     let tipo = $('#tipo').val();
 
-    console.info(this.nombre);
+    let unaMascota:Mascota= new Mascota(nombre, edad, sexo, tipo);
 
-    let Mascota:MascotasComponent = new MascotasComponent(this.servicio); 
+  //  let Mascota:MascotasComponent = new MascotasComponent(this.servicio); 
         console.info(Mascota);
 
-    this.servicio.addMascota(Mascota).subscribe(data => {
-          this.mascotas.push(data);
+    //this.servicio.addMascota(Mascota).subscribe(data => {
+    //      this.mascotas.push(data);
 
-    });
+    //});
 
     this.visible = false;
   }
