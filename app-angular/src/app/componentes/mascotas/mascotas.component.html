@@ -4,17 +4,17 @@
 <br><br>
 <form class="form-horizontal" style="margin-left:300px">
   <div *ngIf="visible"  class="input-group input-group-xs" id="formAlta">
-        <input class="form-control" type="text" placeholder="Nombre de la mascota">
+        <input id="nombre" class="form-control" type="text" placeholder="Nombre de la mascota">
         <br>
-        <input class="form-control" type="text" placeholder="Edad de mascota">
+        <input  id="edad" class="form-control" type="text" placeholder="Edad de mascota">
         <label><br>
-        <input class="radio" type="radio" name="sexo" value="M" checked>Macho<br>
+        <input id="m" class="radio" type="radio" name="sexo" value="M" checked>Macho<br>
         </label>
         <label><br>
-        <input class="radio" type="radio" name="sexo" value="H"> Hembra
+        <input id="h" class="radio" type="radio" name="sexo" value="H"> Hembra
         </label>
         <br><br>
-         <select class="form-control" id="tipo">
+         <select id="tipo" class="form-control" id="tipo">
             <option value="PERRO">Perro</option>
             <option value="GATO">Gato</option>
         </select>
