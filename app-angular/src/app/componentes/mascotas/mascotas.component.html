@@ -1,6 +1,28 @@
 
 
-<button type="button" class="btn btn-primary">Agregar Mascota</button>
+<button type="button" class="btn btn-primary" (click)="mostrarAlta()">Agregar Mascota</button>
+<br><br>
+<form class="form-horizontal" style="margin-left:300px">
+  <div *ngIf="visible"  class="input-group input-group-xs" id="formAlta">
+        <input class="form-control" type="text" placeholder="Nombre de la mascota">
+        <br>
+        <input class="form-control" type="text" placeholder="Edad de mascota">
+        <label><br>
+        <input class="radio" type="radio" name="sexo" value="M" checked>Macho<br>
+        </label>
+        <label><br>
+        <input class="radio" type="radio" name="sexo" value="H"> Hembra
+        </label>
+        <br><br>
+         <select class="form-control" id="tipo">
+            <option value="PERRO">Perro</option>
+            <option value="GATO">Gato</option>
+        </select>
+        <br><br>
+        <input type="button" class="btn btn-success" value="Insertar Mascota" (click)="agregarMascota()">
+        <input type="button" style="margin-left:20px" class="btn btn-default" value="Ocultar" (click)="ocultarFormAlta()">
+  </div>
+</form>
 
 <br><br>
 <div class="table-responsive">
