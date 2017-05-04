@@ -15,6 +15,11 @@ export class MascotasComponent implements OnInit {
   mascotas: Array<MascotasComponent> = [];
   visible: boolean = false;
 
+  public nombre:string;
+  public edad;
+  public sexo;
+  public tipo;
+
   constructor(private servicio: MascotasService) {
 
    }
@@ -38,22 +43,24 @@ export class MascotasComponent implements OnInit {
     this.visible = false;
   }
 
-  private agregarMascota(){//Mascota:MascotasComponent){
+  private agregarMascota() //Mascota:MascotasComponent){
+  {
       
-    let nombre = $('#nombre').val();
-    let edad = $('#edad').val();
-    let sexo = $("input[name='sexo']:checked").val();
-    let tipo = $('#tipo').val();
+   // let nombre = $('#nombre').val();
+    //let edad = $('#edad').val();
+   // let sexo = $("input[name='sexo']:checked").val();
+   // let tipo = $('#tipo').val();
 
-    let unaMascota:Mascota= new Mascota(nombre, edad, sexo, tipo);
+    let unaMascota:Mascota= new Mascota(this.nombre, this.edad,this.sexo,this.tipo, this.servicio);
 
-  //  let Mascota:MascotasComponent = new MascotasComponent(this.servicio); 
-        console.info(Mascota);
+   // let mmascota:MascotasComponent = new MascotasComponent(this.servicio); 
+        //console.info(Mascota);
 
-    //this.servicio.addMascota(Mascota).subscribe(data => {
-    //      this.mascotas.push(data);
+   // let laMascota:Mascota=new Mascota(this.nombre, this.edad, this.sexo, this.tipo, servicio)
+        this.servicio.addMascota(unaMascota).subscribe(data => {
+          this.mascotas.push(data);
 
-    //});
+        });   
 
     this.visible = false;
   }

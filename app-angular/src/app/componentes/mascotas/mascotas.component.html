@@ -3,19 +3,26 @@
 <button type="button" class="btn btn-primary" (click)="mostrarAlta()">Agregar Mascota</button>
 <br><br>
 <div class="container">
-<form class="form-horizontal" style="margin-left:300px">
+<form #f="ngForm" class="form-horizontal" style="margin-left:300px">
   <div *ngIf="visible"  class="input-group input-group-xs" id="formAlta">
-        <input id="nombre" class="form-control" type="text" placeholder="Nombre de la mascota">
+        <input [(ngModel)]="nombre" name="nombre"  class="form-control" type="text" placeholder="Nombre de la mascota">
         <br>
-        <input  id="edad" class="form-control" type="text" placeholder="Edad de mascota">
-        <label><br>
-        <input id="m" class="radio" type="radio" name="sexo" value="M" checked>Macho<br>
-        </label>
-        <label><br>
-        <input id="h" class="radio" type="radio" name="sexo" value="H"> Hembra
-        </label>
+        <input [(ngModel)]="edad"  name="edad" class="form-control" type="text" placeholder="Edad de mascota">
+        
         <br><br>
-         <select id="tipo" class="form-control" id="tipo">
+        <div class="btn-group">
+               <label>
+                <input [(ngModel)]="sexo" id="m" class="radio" type="radio" name="sexo" value="M" checked>Macho
+                </label>
+        </div>
+        <div class="btn-group">
+           <label> 
+           <input [(ngModel)]="sexo" id="h" class="radio" type="radio" name="sexo" value="H"> Hembra
+          </label>
+        </div>
+        
+        <br><br>
+         <select [(ngModel)]="tipo" name="tipo" class="form-control">
             <option value="PERRO">Perro</option>
             <option value="GATO">Gato</option>
         </select>

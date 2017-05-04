@@ -24,16 +24,17 @@ $app->get("/mascotas/(:id)", function ($id) use($app)
 
 
 $app->post("/mascotas/agregar", function() use($app){
-	$nombre = $app->request->post("nombre");
-	$edad = $app->request->post("edad");
-    $sexo = $app->request->post("sexo");
-	$tipo = $app->request->post("tipo");
+	//$nombre = $app->request->post("nombre");
+	//$edad = $app->request->post("edad");
+    //$sexo = $app->request->post("sexo");
+	//$tipo = $app->request->post("tipo");
+	$entidad = $app->request->post("entidad");
 	
-    $mascotaJSON = Mascota::mascotaAdd($nombre, $edad, $sexo, $tipo);
+    $mascotaJSON = Mascota::mascotaAdd($nombre->nombre, $edad.nombre, $sexo.nombre, $tipo.nombre);
 
 	$app->response->headers->set("Content-Type", "application/json");
 	$app->response->status(200);
-	$app->response->body($mascotaJSON);
+	$app->response->body($mascotasJSON);
 });
 
 $app->put("/mascotas/modificar", function() use($app){
